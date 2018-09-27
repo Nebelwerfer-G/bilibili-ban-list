@@ -11,6 +11,14 @@
   <item enabled="true">r=[3３三立]\s+[dDＤ体體]</item> <!-- 立  体  弹  幕 -->
   <item enabled="true">r=(^|是)..[红橙黄绿青蓝紫黑白灰].{0,2}$</item> <!-- 颜色 -->
   
+  <!-- 专治抽象人的Emoji屏蔽表，只屏蔽以Emoji开头的弹幕，大概能避免大部分误伤 -->
+  <!-- 实验性功能，要是万了个一B站正则支持无代理对的四字符过滤，可能会向原作者发 Pull Request -->
+  <!-- 不支持，整个 ES 5 都不支持的东西，指望B站正则支持，你说你🐴呢 -->
+  <item enabled="true">r=^\uD83D[\uDE00-\uDE4F]</item><!-- 基础面部表情 -->
+  <item enabled="true">r=^\uD83C[\uDF00-\uE160]</item><!-- 杂项符号扩展 位点系列1-->
+  <item enabled="true">r=^\uD83D[\uDE80-\uDEFF]</item><!-- 杂项符号扩展 位点系列2-->
+  <item enabled="true">r=^\uD83E[\uDD00-\uDDFF]</item><!-- 杂项符号扩展 位点系列3-->
+  
   <!-- 播放相关 -->
   <item enabled="true">r=^[第前]([0-9零一二两三四五六七八九十百千万亿].{0,6})?$</item>
   <item enabled="true">r=^.{1,6}[天时点分钟秒]前</item>
